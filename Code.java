@@ -11,28 +11,21 @@ public class Main extends JFrame implements ActionListener {
 
     Main() {
         super("MorningstarNotes");
-
-        // Set up the frame
         setSize(500, 700);
         setResizable(false);
         getContentPane().setBackground(new Color(238, 115, 115));
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-
-        // Set up the text area
         t = new JTextArea();
         t.setFont(new Font("Arial", Font.BOLD, 17));
 
-        // Adding scroll pane for the text area
         JScrollPane scrollPane = new JScrollPane(t);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         scrollPane.setPreferredSize(new Dimension(480, 500));
 
-        // Set up the button
         b = new JButton("Save");
         b.addActionListener(this);
 
-        // Add components to the frame
         setLayout(new BorderLayout());
         add(scrollPane, BorderLayout.CENTER);
         JPanel bottomPanel = new JPanel();
